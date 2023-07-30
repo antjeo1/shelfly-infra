@@ -4,7 +4,7 @@ metadata:
   name: web-example
   namespace: shelfly
 spec:
-  project: default
+  project: shelfly
   source:
     repoURL: https://github.com/antjeo1/shelfly-infra.git
     targetRevision: HEAD
