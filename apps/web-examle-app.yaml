@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-example
+  namespace: shelfly
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/antjeo1/shelfly-infra.git
+    targetRevision: HEAD
+    path: web-example
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: shelfly
