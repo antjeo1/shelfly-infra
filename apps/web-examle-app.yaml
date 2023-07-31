@@ -2,8 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: web-example
-  namespace: shelfly
-spec:
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.iospec:
   project: shelfly
   source:
     repoURL: https://github.com/antjeo1/shelfly-infra.git
